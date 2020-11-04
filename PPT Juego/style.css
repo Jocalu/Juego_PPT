@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  background: #24272E;
+}
+header{
+    background: #E25B4D;
+    padding: 10px;
+    color: #fff;
+    font-family: 'Syne Mono', monospace;
+}
+header>h1{
+    font-size: 60px;
+}
+.marcador{
+    border: 3px solid #fff;
+    margin: 20px auto;
+    width: 200px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px 20px;
+    position: relative;
+}
+.badge{
+    background: #E25B4D;
+    font-size: 14px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 3px 2px;
+}
+.user-label{
+    position: absolute;
+    top: auto;
+    left: -25px;
+    height: 50%;
+    width: 30%;
+    font-family: 'Poppins', sans-serif;
+}
+.comp-label{
+    position: absolute;
+    top: auto;
+    right: -25px;
+    height: 50%;
+    width: 30%;
+    font-family: 'Poppins', sans-serif;
+}
+#user-score, #comp-score{
+    padding: 5px;
+    font-size: 30px;
+}
+.result{
+    font-size: 40px;
+    color: #fff;
+}
+.result>p{
+    text-align: center;
+    font-family: 'Itim', cursive;
+}
+.opciones{
+    text-align: center;
+    margin: 50px 0;
+}
+.choice{
+    display: inline-block;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    background: #fff;
+    padding: 15px;
+    margin: 20px;
+    transition: all 0.3s ease;
+}
+.choice:hover{
+    background: #ECF29F;
+    cursor: pointer;
+}
+#accion{
+    font-family: 'Itim', cursive;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+}
+.verde{
+    border: 5px solid #3ccf1a;
+    box-shadow: 0 0 10px #4bc62e;
+}
+.rojo{
+    border: 5px solid #d30e0e;
+    box-shadow: 0 0 10px #cc2a2a;
+}
+.gris{
+    border: 5px solid #d0c7c7;
+    box-shadow: 0 0 10px #bfb6b6;
+}
