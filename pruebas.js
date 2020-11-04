@@ -187,7 +187,7 @@ console.log(colores);
 */
 
 
-
+var hola = ('Hola que tal')
 
 
 
