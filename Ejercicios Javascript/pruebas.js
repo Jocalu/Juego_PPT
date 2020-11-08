@@ -184,11 +184,140 @@ function borrarElementoMatriz(elemento, matriz) {
 
 borrarElementoMatriz('rojo', colores);
 console.log(colores);
-*/
-
-
-var hola = ('Hola Juan')
 
 
 
 
+
+
+
+
+
+
+
+
+var outputResults = [];
+
+function toFixedDecimals(result){
+    if(Number.isInteger(result)){
+        return result.toFixed();
+    }else{
+        return result.toFixed(3);
+    }
+}
+
+function calculator(a, b){  
+
+    if((typeof a === 'number' && typeof b === 'number') || (typeof a === 'number' && b === undefined)){
+        
+        if(b === undefined){
+            var resultSqrt = Math.sqrt(a);
+            console.log(`${a}½ = ${toFixedDecimals(resultSqrt)}`.toString());
+        }else{
+            var results = [];
+            var resultSum = a + b;            
+            var resultRest = a - b;
+            var resultMult = a * b;
+            var resultDiv = a / b;
+
+            results.push(resultSum);
+            results.push(resultRest);
+            results.push(resultMult);
+            results.push(resultDiv);
+
+            for(var i = 0; i < results.length; i++){
+                switch(i){
+                    case 0:
+                        outputResults.push(`${a} + ${b} = ${toFixedDecimals(results[i])}`.toString());
+                        break;
+                    case 1:
+                        outputResults.push(`${a} - ${b} = ${toFixedDecimals(results[i])}`.toString());
+                        break;
+                    case 2:
+                        outputResults.push(`${a} × ${b} = ${toFixedDecimals(results[i])}`.toString());
+                        break;
+                    case 3:
+                        outputResults.push(`${a} ÷ ${b} = ${toFixedDecimals(results[i])}`.toString());
+                        break;
+                }
+            }
+        }
+
+        for(var i = 0; i < outputResults.length; i++){
+            console.log(outputResults[i]);
+        }
+
+    }else{
+        console.log('No te entiendo. Introduce valores numéricos');
+    }
+}
+
+
+
+
+
+
+function calculator() {
+    var results = [];
+    var sum;
+    var txtSum = 'Addition: ';
+    var sub;
+    var txtSub = 'Substraction: ';
+    var mul;
+    var txtMul = 'Multiplication: ';
+    var div;
+    var txtDiv = 'Division: ';
+    if (!checkNumber(arguments)) {
+      console.log('No calculation because no valid argument');
+    } else if (arguments.length === 0) {
+      console.log('No input');
+    } else if (arguments.length === 1) {
+      results.push(
+        'Square root ' + arguments[0] + ' = ' + Math.sqrt(arguments[0]).toFixed(3)
+      );
+    } else {
+      for (num in arguments) {
+        if (num === '0') {
+          sum = arguments[num];
+          sub = arguments[num];
+          mul = arguments[num];
+          div = arguments[num];
+        } else {
+          sum += arguments[num];
+          sub -= arguments[num];
+          mul *= arguments[num];
+          div /= arguments[num];
+        }
+        txtSum += arguments[num] + ' + ';
+        txtSub += arguments[num] + ' - ';
+        txtMul += arguments[num] + ' * ';
+        txtDiv += arguments[num] + ' / ';
+      }
+      txtSum = txtSum.substring(0, txtSum.length - 2) + ' = ' + sum.toFixed(3);
+      txtSub = txtSub.substring(0, txtSub.length - 2) + ' =' + sub.toFixed(3);
+      txtMul = txtMul.substring(0, txtMul.length - 2) + ' = ' + mul.toFixed(3);
+      txtDiv = txtDiv.substring(0, txtDiv.length - 2) + ' = ' + div.toFixed(3);
+      results.push(txtSum);
+      results.push(txtSub);
+      results.push(txtMul);
+      results.push(txtDiv);
+    }
+    console.log(results.join('\n'));
+  }
+  
+  function checkNumber(arguments) {
+    for (num in arguments) {
+      if (typeof arguments[num] !== 'number' || Number.isNaN(arguments[num])) {
+        console.log(arguments[num] + ' is not a number.');
+        return false;
+      }
+    }
+    return true;
+  }
+
+
+  */
+ 
+
+
+  
